@@ -11,8 +11,7 @@ export const useNews = () => {
   const [news, setNews] = useState<Array<News>>([]);
 
   const getNews = useCallback(() => {
-    const url =
-      "https://newsapi.org/v2/everything?q=bitcoin&from=2021-09-02&sortBy=publishedAt&apiKey=5b316991d5d44588a52e85671c97867a";
+    const url = "";
     let req = new Request(url);
     fetch(req).then(async (response) => {
       setNews(await response.json());
@@ -25,7 +24,7 @@ export const useNews = () => {
   //     .get<Array<News>>(
   //       "http://newsapi.org/v2/top-headlines?" +
   //         "country=ja&" +
-  //         `apiKey=5b316991d5d44588a52e85671c97867a`
+  //         `
   //     )
   //     .then((res) => setNews(res.data))
   //     .catch(() => {
@@ -42,5 +41,5 @@ export const useNews = () => {
 };
 
 // useEffect(()=>{
-//   axios.get("http://newsapi.org/v2/top-headlines?country=ja&"+"apiKey=5b316991d5d44588a52e85671c97867a").then(()=>()).catch(()=>{}).finally(()=>{});
+//   axios.get("http://newsapi.org/v2/top-headlines?country=ja&"+"apiKey=").then(()=>()).catch(()=>{}).finally(()=>{});
 // },[])
