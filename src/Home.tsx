@@ -27,7 +27,7 @@ export const Home: VFC = memo(() => {
             />
           </WrapItem>
         ))}
-        <h1>Hello CodeSandbox</h1>
+        <h1>News</h1>
       </Wrap>
     </>
   );

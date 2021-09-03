@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { News } from "./news";
 // import { useMessage } from "./useMessage";
@@ -12,9 +12,7 @@ export const useNews = () => {
 
   const getNews = useCallback(() => {
     const url =
-      "http://newsapi.org/v2/top-headlines?" +
-      "country=ja&" +
-      `apiKey=5b316991d5d44588a52e85671c97867a`;
+      "https://newsapi.org/v2/everything?q=bitcoin&from=2021-09-02&sortBy=publishedAt&apiKey=5b316991d5d44588a52e85671c97867a";
     let req = new Request(url);
     fetch(req).then(async (response) => {
       setNews(await response.json());
